@@ -1,0 +1,8 @@
+name: pointCompass
+version: '1.0-SNAPSHOT'
+main: org.sarcxsm.pointcompass.PointCompass
+api-version: 1.20
+commands:
+  compass:
+    description: A way to set a compass to set coordinates.
+    usage: /<command> <xCoord> <zCoord>
