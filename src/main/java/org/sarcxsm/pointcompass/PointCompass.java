@@ -13,6 +13,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -68,7 +69,8 @@ public final class PointCompass extends JavaPlugin implements Listener {
                     mm.setLore(compassLore);
                     //Lore End
 
-                    mm.addEnchant(Enchantment.KNOCKBACK, 10, true);
+                    mm.addEnchant(Enchantment.DURABILITY, 10, true);
+                    mm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
                     compass.setItemMeta(mm);
                     inventory.setItem(4, compass);
                     p.setCompassTarget(compassLoc); // Help please
